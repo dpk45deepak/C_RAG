@@ -1,0 +1,2 @@
+import {strongModel} from '@/lib/gemini/client';import {generationPrompt} from '../prompts/generation';
+export async function generateAnswer(apiKey:string,question:string,context:string){try{const model=strongModel(apiKey);const res=await model.invoke(generationPrompt(question,context));return typeof res.content==='string'?res.content:JSON.stringify(res.content)}catch{return `I could not reach Gemini for final generation. Based on the refined context available:\n\n${context.slice(0,1200)}${context.length>1200?'...':''}`}}

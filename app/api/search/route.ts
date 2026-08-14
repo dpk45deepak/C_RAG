@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {z} from 'zod';import {TavilySearchProvider} from '@/lib/web-search';export const runtime='nodejs';export async function POST(req:Request){const {query}=z.object({query:z.string().min(1).max(500)}).parse(await req.json());return NextResponse.json({results:await new TavilySearchProvider().search(query,5)})}

@@ -1,0 +1,1 @@
+export const rewritePrompt=(question:string)=>`Rewrite this question as a concise keyword-rich web search query of 6-14 words. Preserve entities and temporal requirements. Do not answer. Return JSON {"query":"..."}. Question: ${question}`;
