@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities; body{@apply bg-slate-50 text-slate-950} .glass{@apply bg-white/80 backdrop-blur border border-white/60 shadow-sm} .prose pre{@apply rounded-xl p-4 overflow-auto bg-slate-950 text-slate-50}

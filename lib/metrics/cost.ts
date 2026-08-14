@@ -1,0 +1,1 @@
+import {pricePerMillion,ragConfig} from '@/lib/rag/config';export function estimateTokens(text:string){return Math.ceil(text.length/4)}export function estimateCost(input:number,output:number,model=ragConfig.fastModel){const p=pricePerMillion[model]??pricePerMillion['gemini-1.5-flash'];return (input/1_000_000)*p.input+(output/1_000_000)*p.output}
