@@ -3,7 +3,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
@@ -33,7 +33,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest",
+    "tailwindcss": "^3.4.17",
     "typescript": "latest",
     "vitest": "latest"
   }
