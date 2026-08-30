@@ -59,7 +59,7 @@ Optional:
 - `GEMINI_MODEL=gemini-1.5-pro`
 - `GEMINI_FAST_MODEL=gemini-1.5-flash`
 - `GEMINI_EMBEDDING_MODEL=text-embedding-004`
-- `TAVILY_API_KEY=` enables web fallback.
+- Tavily API key: enter it in the chat UI when you want optional web fallback for the current session.
 
 ## Local Setup
 
@@ -81,7 +81,7 @@ npm run build
 
 ## Vercel Deployment
 
-Deploy as a standard Next.js project. API routes use the Node.js runtime for LangChain/LangGraph compatibility. No persistent filesystem writes, local FAISS index, Python service, Redis, Docker, or database is required. Add `TAVILY_API_KEY` in Vercel only if you want web fallback.
+Deploy as a standard Next.js project. API routes use the Node.js runtime for LangChain/LangGraph compatibility. No persistent filesystem writes, local FAISS index, Python service, Redis, Docker, or database is required. Users can enter a Tavily API key in the chat UI when they want web fallback; no shared server-side Tavily key is required.
 
 ## LLMOps and Cost
 
